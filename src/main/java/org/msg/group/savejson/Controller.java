@@ -27,7 +27,7 @@ public class Controller {
 
     private static final String FILE_NAME = "C:\\poze";
 
-    @RequestMapping(value = "file", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+    @RequestMapping(value = "/file", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
     @ResponseBody
     public List<String> save(@RequestBody FileWrapper wrapper) {
         List<String> response = new ArrayList<String>();

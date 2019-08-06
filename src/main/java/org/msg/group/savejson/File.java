@@ -1,12 +1,14 @@
 package org.msg.group.savejson;
 
+import java.io.Serializable;
+
 /**
  * Document me.
  *
  * @author msg systems AG; User Name.
  * @since 19.1.2
  */
-public class File {
+public class File implements Serializable {
 
     private String path;
 
