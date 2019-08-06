@@ -29,9 +29,9 @@ public class Controller {
 
     @RequestMapping(value = "/file", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
     @ResponseBody
-    public List<String> save(@RequestBody FileWrapper wrapper) {
+    public List<String> save(@RequestBody List<File> files) {
         List<String> response = new ArrayList<String>();
-        for (File file : wrapper.getFiles()) {
+        for (File file : files) {
             String pathOfDownload = file.getPath();
             try (BufferedInputStream in = new BufferedInputStream(new URL(pathOfDownload).openStream());
                  FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME)) {
